@@ -23,7 +23,8 @@ then update submodules:
 
 ```
 :: database.php ::
-
+```
+```php
 App::uses('DynamicDatabaseConfig', 'DynamicDatabaseConfig.Config');
 class DATABASE_CONFIG extends DynamicDatabaseConfig {
 	//class items
@@ -34,7 +35,8 @@ Then make configs that you want to be dynamically loaded (when class instance wi
 
 ```
 :: database.php ::
-
+```
+```php
 App::uses('DynamicDatabaseConfig', 'DynamicDatabaseConfig.Config');
 class DATABASE_CONFIG extends DynamicDatabaseConfig {
 	//can't start with _ and must be public
@@ -49,17 +51,19 @@ class DATABASE_CONFIG extends DynamicDatabaseConfig {
 
 ```
 :: bootstrap.php ::
+```
+```php
 CakePlugin::load('DynamicDatabaseConfig');
 
 ```
 
-#Usage
+##Usage
 
 Once you add public methods in your DATABASE_CONFIG they will be automatically assigned to public property with same name.
 Now you can easily make new configs based on part of existing configs. Your old property-based configs will work as usual,
 unless you create method with same name.
 
-#Advanced usage
+##Advanced usage
 
 There exist simple dynamic rename of configs.
 Assume you want add default config, config for test and public enviroument. In your models used `default` config and you have
@@ -68,7 +72,8 @@ allow renaming and make renaming action:
 
 ```
 :: database.php ::
-
+```
+```php
 App::uses('DynamicDatabaseConfig', 'DynamicDatabaseConfig.Config');
 class DATABASE_CONFIG extends DynamicDatabaseConfig {
 

@@ -1,4 +1,4 @@
-DynamicDatabaseConfig Plugin
+DynamicDatabaseConfig Plugin [![Build Status](https://travis-ci.org/imsamurai/CakePHP-DynamicDatabaseConfig.png)](https://travis-ci.org/imsamurai/CakePHP-DynamicDatabaseConfig)
 ============================
 
 CakePHP DynamicDatabaseConfig Plugin for more flexible handle datasource configs

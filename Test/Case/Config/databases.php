@@ -7,6 +7,7 @@
  */
 App::uses('DynamicDatabaseConfig', 'DynamicDatabaseConfig.Config');
 
+//@codingStandardsIgnoreStart
 class DynamicDatabaseConfigTest1 extends DynamicDatabaseConfig {
 
 	public $static_db_config_name = array(
@@ -83,3 +84,5 @@ class DynamicDatabaseConfigTest2 extends DynamicDatabaseConfig {
 	}
 
 }
+
+//@codingStandardsIgnoreEnd

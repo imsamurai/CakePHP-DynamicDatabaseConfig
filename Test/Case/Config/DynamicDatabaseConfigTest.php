@@ -14,9 +14,9 @@ class DynamicDatabaseConfigTest extends CakeTestCase {
 		parent::setUp();
 	}
 
-	public function test__construct() {
+	public function testConstruct() {
 		$DB = new DynamicDatabaseConfigTest1();
-		$dbProperties = (array) $DB;
+		$dbProperties = (array)$DB;
 		$this->assertCount(4, $dbProperties);
 		$this->assertSame($DB->testChildDBName1(), $DB->testChildDBName1);
 		$this->assertSame($DB->testDBName2(), $DB->testDBName2);
@@ -26,9 +26,9 @@ class DynamicDatabaseConfigTest extends CakeTestCase {
 		));
 	}
 
-	public function test_applyNamingSchema() {
+	public function testApplyNamingSchema() {
 		$DB = new DynamicDatabaseConfigTest2();
-		$dbProperties = (array) $DB;
+		$dbProperties = (array)$DB;
 		$this->assertCount(3, $dbProperties);
 		$this->assertNotSame($DB->dbConfig1(), $DB->dbConfig1);
 		$this->assertSame($DB->dbConfig1Public(), $DB->dbConfig1Public);

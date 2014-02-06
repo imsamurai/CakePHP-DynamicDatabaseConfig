@@ -1,5 +1,7 @@
-DynamicDatabaseConfig Plugin [![Build Status](https://travis-ci.org/imsamurai/CakePHP-DynamicDatabaseConfig.png)](https://travis-ci.org/imsamurai/CakePHP-DynamicDatabaseConfig)
+DynamicDatabaseConfig Plugin
 ============================
+[![Build Status](https://travis-ci.org/imsamurai/CakePHP-DynamicDatabaseConfig.png)](https://travis-ci.org/imsamurai/CakePHP-DynamicDatabaseConfig) [![Coverage Status](https://coveralls.io/repos/imsamurai/CakePHP-DynamicDatabaseConfig/badge.png?branch=master)](https://coveralls.io/r/imsamurai/CakePHP-DynamicDatabaseConfig?branch=master) [![Latest Stable Version](https://poser.pugx.org/imsamurai/dynamic-database-config/v/stable.png)](https://packagist.org/packages/imsamurai/dynamic-database-config) [![Total Downloads](https://poser.pugx.org/imsamurai/dynamic-database-config/downloads.png)](https://packagist.org/packages/imsamurai/dynamic-database-config) [![Latest Unstable Version](https://poser.pugx.org/imsamurai/dynamic-database-config/v/unstable.png)](https://packagist.org/packages/imsamurai/dynamic-database-config) [![License](https://poser.pugx.org/imsamurai/dynamic-database-config/license.png)](https://packagist.org/packages/imsamurai/dynamic-database-config)
+
 
 CakePHP DynamicDatabaseConfig Plugin for more flexible handle datasource configs
 

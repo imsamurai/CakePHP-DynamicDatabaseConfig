@@ -20,23 +20,8 @@
 <path fill="none" stroke="gray" d="M79,-110C79,-104 85,-98 91,-98"/>
 <text text-anchor="middle" x="349.5" y="-320.1" font-family="Times Roman,serif" font-size="11.00" fill="gray">Global</text>
 </g>
-<!-- \\AllDynamicDatabaseConfigTest -->
-<g id="node2" class="node"><title>\\AllDynamicDatabaseConfigTest</title>
-<polygon fill="none" stroke="black" points="612,-196 406,-196 406,-160 612,-160 612,-196"/>
-<text text-anchor="middle" x="509" y="-175.1" font-family="Courier,monospace" font-size="11.00">AllDynamicDatabaseConfigTest</text>
-</g>
-<!-- \\PHPUnit_Framework_TestSuite -->
-<g id="node8" class="node"><title>\\PHPUnit_Framework_TestSuite</title>
-<ellipse fill="none" stroke="black" cx="167" cy="-72" rx="166.877" ry="18.3848"/>
-<text text-anchor="middle" x="167" y="-68.4" font-family="Times Roman,serif" font-size="14.00" fill="gray">\PHPUnit_Framework_TestSuite</text>
-</g>
-<!-- \\AllDynamicDatabaseConfigTest&#45;&gt;\\PHPUnit_Framework_TestSuite -->
-<g id="edge3" class="edge"><title>\\AllDynamicDatabaseConfigTest&#45;&gt;\\PHPUnit_Framework_TestSuite</title>
-<path fill="none" stroke="black" d="M427.158,-159.922C419.856,-157.306 412.699,-154.344 406,-151 369.483,-132.771 371.587,-109.905 334,-94 326.354,-90.7645 318.35,-87.9761 310.161,-85.5753"/>
-<polygon fill="none" stroke="black" points="311.043,-82.188 300.474,-82.9316 309.2,-88.941 311.043,-82.188"/>
-</g>
 <!-- \\DynamicDatabaseConfigTest1 -->
-<g id="node3" class="node"><title>\\DynamicDatabaseConfigTest1</title>
+<g id="node2" class="node"><title>\\DynamicDatabaseConfigTest1</title>
 <polygon fill="none" stroke="black" points="605,-304 413,-304 413,-268 605,-268 605,-304"/>
 <text text-anchor="middle" x="509" y="-283.1" font-family="Courier,monospace" font-size="11.00">DynamicDatabaseConfigTest1</text>
 </g>
@@ -47,34 +32,49 @@
 <text text-anchor="start" x="96" y="-251.233" font-family="Courier,monospace" font-size="11.00">DynamicDatabaseConfig</text>
 </g>
 <!-- \\DynamicDatabaseConfigTest1&#45;&gt;\\DynamicDatabaseConfig -->
-<g id="edge5" class="edge"><title>\\DynamicDatabaseConfigTest1&#45;&gt;\\DynamicDatabaseConfig</title>
+<g id="edge3" class="edge"><title>\\DynamicDatabaseConfigTest1&#45;&gt;\\DynamicDatabaseConfig</title>
 <path fill="none" stroke="black" d="M412.824,-278.407C363.853,-274.541 304.683,-269.87 256.667,-266.079"/>
 <polygon fill="none" stroke="black" points="256.843,-262.582 246.598,-265.284 256.292,-269.56 256.843,-262.582"/>
 </g>
 <!-- \\DynamicDatabaseConfigTest2 -->
-<g id="node4" class="node"><title>\\DynamicDatabaseConfigTest2</title>
+<g id="node3" class="node"><title>\\DynamicDatabaseConfigTest2</title>
 <polygon fill="none" stroke="black" points="605,-250 413,-250 413,-214 605,-214 605,-250"/>
 <text text-anchor="middle" x="509" y="-229.1" font-family="Courier,monospace" font-size="11.00">DynamicDatabaseConfigTest2</text>
 </g>
 <!-- \\DynamicDatabaseConfigTest2&#45;&gt;\\DynamicDatabaseConfig -->
-<g id="edge7" class="edge"><title>\\DynamicDatabaseConfigTest2&#45;&gt;\\DynamicDatabaseConfig</title>
+<g id="edge5" class="edge"><title>\\DynamicDatabaseConfigTest2&#45;&gt;\\DynamicDatabaseConfig</title>
 <path fill="none" stroke="black" d="M412.824,-239.593C363.853,-243.459 304.683,-248.13 256.667,-251.921"/>
 <polygon fill="none" stroke="black" points="256.292,-248.44 246.598,-252.716 256.843,-255.418 256.292,-248.44"/>
 </g>
 <!-- \\DynamicDatabaseConfigTest -->
-<g id="node5" class="node"><title>\\DynamicDatabaseConfigTest</title>
-<polygon fill="none" stroke="black" points="601,-142 417,-142 417,-106 601,-106 601,-142"/>
-<text text-anchor="middle" x="509" y="-121.1" font-family="Courier,monospace" font-size="11.00">DynamicDatabaseConfigTest</text>
+<g id="node4" class="node"><title>\\DynamicDatabaseConfigTest</title>
+<polygon fill="none" stroke="black" points="601,-196 417,-196 417,-160 601,-160 601,-196"/>
+<text text-anchor="middle" x="509" y="-175.1" font-family="Courier,monospace" font-size="11.00">DynamicDatabaseConfigTest</text>
 </g>
 <!-- \\CakeTestCase -->
-<g id="node12" class="node"><title>\\CakeTestCase</title>
-<ellipse fill="none" stroke="black" cx="167" cy="-18" rx="82.0244" ry="18.3848"/>
-<text text-anchor="middle" x="167" y="-14.4" font-family="Times Roman,serif" font-size="14.00" fill="gray">\CakeTestCase</text>
+<g id="node10" class="node"><title>\\CakeTestCase</title>
+<ellipse fill="none" stroke="black" cx="167" cy="-72" rx="82.0244" ry="18.3848"/>
+<text text-anchor="middle" x="167" y="-68.4" font-family="Times Roman,serif" font-size="14.00" fill="gray">\CakeTestCase</text>
 </g>
 <!-- \\DynamicDatabaseConfigTest&#45;&gt;\\CakeTestCase -->
-<g id="edge9" class="edge"><title>\\DynamicDatabaseConfigTest&#45;&gt;\\CakeTestCase</title>
-<path fill="none" stroke="black" d="M476.141,-105.991C441.708,-87.8884 385.553,-60.5059 334,-45 307.565,-37.049 278.029,-31.2968 251.233,-27.2007"/>
-<polygon fill="none" stroke="black" points="251.513,-23.7042 241.11,-25.7107 250.493,-30.6296 251.513,-23.7042"/>
+<g id="edge7" class="edge"><title>\\DynamicDatabaseConfigTest&#45;&gt;\\CakeTestCase</title>
+<path fill="none" stroke="black" d="M427.158,-159.922C419.856,-157.306 412.699,-154.344 406,-151 369.483,-132.771 371.587,-109.905 334,-94 310.685,-84.1339 284.04,-78.4248 258.985,-75.1894"/>
+<polygon fill="none" stroke="black" points="259.071,-71.6756 248.732,-73.9885 258.257,-78.6281 259.071,-71.6756"/>
+</g>
+<!-- \\AllDynamicDatabaseConfigTest -->
+<g id="node5" class="node"><title>\\AllDynamicDatabaseConfigTest</title>
+<polygon fill="none" stroke="black" points="612,-142 406,-142 406,-106 612,-106 612,-142"/>
+<text text-anchor="middle" x="509" y="-121.1" font-family="Courier,monospace" font-size="11.00">AllDynamicDatabaseConfigTest</text>
+</g>
+<!-- \\PHPUnit_Framework_TestSuite -->
+<g id="node12" class="node"><title>\\PHPUnit_Framework_TestSuite</title>
+<ellipse fill="none" stroke="black" cx="167" cy="-18" rx="166.877" ry="18.3848"/>
+<text text-anchor="middle" x="167" y="-14.4" font-family="Times Roman,serif" font-size="14.00" fill="gray">\PHPUnit_Framework_TestSuite</text>
+</g>
+<!-- \\AllDynamicDatabaseConfigTest&#45;&gt;\\PHPUnit_Framework_TestSuite -->
+<g id="edge9" class="edge"><title>\\AllDynamicDatabaseConfigTest&#45;&gt;\\PHPUnit_Framework_TestSuite</title>
+<path fill="none" stroke="black" d="M476.141,-105.991C441.708,-87.8884 385.553,-60.5059 334,-45 318.977,-40.4816 302.953,-36.6733 287,-33.4754"/>
+<polygon fill="none" stroke="black" points="287.567,-30.0205 277.085,-31.5623 286.241,-36.8937 287.567,-30.0205"/>
 </g>
 </g>
 </svg>

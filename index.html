@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Dynamic Database Config for CakePHP by imsamurai</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <header>
+        <h1>Dynamic Database Config for CakePHP</h1>
+        <p>Plugin for flexible datasource configs</p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/imsamurai/CakePHP-DynamicDatabaseConfig" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/imsamurai/CakePHP-DynamicDatabaseConfig/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/imsamurai/CakePHP-DynamicDatabaseConfig/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h2>
+<a name="api-documentation" class="anchor" href="#api-documentation"><span class="octicon octicon-link"></span></a>API Documentation</h2>
+
+<p>Check out <a href="http://imsamurai.github.io/CakePHP-DynamicDatabaseConfig/docs/master/">Dynamic Database Config API Documentation</a></p>
+
+<h2>
+<a name="abstract" class="anchor" href="#abstract"><span class="octicon octicon-link"></span></a>Abstract</h2>
+
+<p><a href="https://travis-ci.org/imsamurai/CakePHP-DynamicDatabaseConfig"><img src="https://travis-ci.org/imsamurai/CakePHP-DynamicDatabaseConfig.png" alt="Build Status"></a> <a href="https://coveralls.io/r/imsamurai/CakePHP-DynamicDatabaseConfig?branch=master"><img src="https://coveralls.io/repos/imsamurai/CakePHP-DynamicDatabaseConfig/badge.png?branch=master" alt="Coverage Status"></a> <a href="https://packagist.org/packages/imsamurai/dynamic-database-config"><img src="https://poser.pugx.org/imsamurai/dynamic-database-config/v/stable.png" alt="Latest Stable Version"></a> <a href="https://packagist.org/packages/imsamurai/dynamic-database-config"><img src="https://poser.pugx.org/imsamurai/dynamic-database-config/downloads.png" alt="Total Downloads"></a> <a href="https://packagist.org/packages/imsamurai/dynamic-database-config"><img src="https://poser.pugx.org/imsamurai/dynamic-database-config/v/unstable.png" alt="Latest Unstable Version"></a> <a href="https://packagist.org/packages/imsamurai/dynamic-database-config"><img src="https://poser.pugx.org/imsamurai/dynamic-database-config/license.png" alt="License"></a></p>
+
+<p>CakePHP DynamicDatabaseConfig Plugin for more flexible handle datasource configs</p>
+
+<h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<h3>
+<a name="step-1-clone-or-download-to-plugindynamicdatabaseconfig" class="anchor" href="#step-1-clone-or-download-to-plugindynamicdatabaseconfig"><span class="octicon octicon-link"></span></a>Step 1: Clone or download to <code>Plugin/DynamicDatabaseConfig</code>
+</h3>
+
+<p>cd my_cake_app/app git://github.com/imsamurai/CakePHP-DynamicDatabaseConfig.git Plugin/DynamicDatabaseConfig</p>
+
+<p>or if you use git add as submodule:</p>
+
+<pre><code>cd my_cake_app
+git submodule add "git://github.com/imsamurai/CakePHP-DynamicDatabaseConfig.git" "app/Plugin/DynamicDatabaseConfig"
+</code></pre>
+
+<p>then update submodules:</p>
+
+<pre><code>git submodule init
+git submodule update
+</code></pre>
+
+<h3>
+<a name="step-2-extend-your-database_config" class="anchor" href="#step-2-extend-your-database_config"><span class="octicon octicon-link"></span></a>Step 2: Extend your DATABASE_CONFIG</h3>
+
+<pre><code>:: database.php ::
+</code></pre>
+
+<div class="highlight highlight-php"><pre><span class="nx">App</span><span class="o">::</span><span class="na">uses</span><span class="p">(</span><span class="s1">'DynamicDatabaseConfig'</span><span class="p">,</span> <span class="s1">'DynamicDatabaseConfig.Config'</span><span class="p">);</span>
+<span class="k">class</span> <span class="nc">DATABASE_CONFIG</span> <span class="k">extends</span> <span class="nx">DynamicDatabaseConfig</span> <span class="p">{</span>
+    <span class="c1">//class items</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>Then make configs that you want to be dynamically loaded (when class instance will be created)</p>
+
+<pre><code>:: database.php ::
+</code></pre>
+
+<div class="highlight highlight-php"><pre><span class="nx">App</span><span class="o">::</span><span class="na">uses</span><span class="p">(</span><span class="s1">'DynamicDatabaseConfig'</span><span class="p">,</span> <span class="s1">'DynamicDatabaseConfig.Config'</span><span class="p">);</span>
+<span class="k">class</span> <span class="nc">DATABASE_CONFIG</span> <span class="k">extends</span> <span class="nx">DynamicDatabaseConfig</span> <span class="p">{</span>
+    <span class="c1">//can't start with _ and must be public</span>
+    <span class="k">public</span> <span class="nx">defaultPublic</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">array</span><span class="p">(</span><span class="cm">/* config data, like in property-config */</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+</pre></div>
+
+<h3>
+<a name="step-3-load-plugin" class="anchor" href="#step-3-load-plugin"><span class="octicon octicon-link"></span></a>Step 3: Load plugin</h3>
+
+<pre><code>:: bootstrap.php ::
+</code></pre>
+
+<div class="highlight highlight-php"><pre><span class="nx">CakePlugin</span><span class="o">::</span><span class="na">load</span><span class="p">(</span><span class="s1">'DynamicDatabaseConfig'</span><span class="p">);</span>
+
+</pre></div>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>Once you add public methods in your DATABASE_CONFIG they will be automatically assigned to public property with same name.
+Now you can easily make new configs based on part of existing configs. Your old property-based configs will work as usual,
+unless you create method with same name.</p>
+
+<h2>
+<a name="advanced-usage" class="anchor" href="#advanced-usage"><span class="octicon octicon-link"></span></a>Advanced usage</h2>
+
+<p>There exist simple dynamic rename of configs.
+Assume you want add default config, config for test and public enviroument. In your models used <code>default</code> config and you have
+information about is this public or test, for ex. constant <code>IS_PUBLIC_INSTALLATION</code>. In this case you need to add 3 configs,
+allow renaming and make renaming action:</p>
+
+<pre><code>:: database.php ::
+</code></pre>
+
+<div class="highlight highlight-php"><pre><span class="nx">App</span><span class="o">::</span><span class="na">uses</span><span class="p">(</span><span class="s1">'DynamicDatabaseConfig'</span><span class="p">,</span> <span class="s1">'DynamicDatabaseConfig.Config'</span><span class="p">);</span>
+<span class="k">class</span> <span class="nc">DATABASE_CONFIG</span> <span class="k">extends</span> <span class="nx">DynamicDatabaseConfig</span> <span class="p">{</span>
+
+    <span class="c1">//allow to rename configs</span>
+    <span class="k">const</span> <span class="no">APPLY_NAMING_SCHEMA</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
+
+    <span class="c1">//default config</span>
+    <span class="k">public</span> <span class="k">default</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">array</span><span class="p">(</span><span class="cm">/* config data, like in property-config */</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">//public config</span>
+    <span class="k">public</span> <span class="nx">defaultPublic</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">array</span><span class="p">(</span><span class="cm">/* config data, like in property-config */</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="o">/</span><span class="nx">local</span> <span class="nx">config</span>
+    <span class="k">public</span> <span class="nx">defaultLocal</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">array</span><span class="p">(</span><span class="cm">/* config data, like in property-config */</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="cm">/* Method that will get each existing config name and try to rename it</span>
+<span class="cm">     * if $configName will not equals to returned value then</span>
+<span class="cm">     * config with returned value name will be erased with data from $configName</span>
+<span class="cm">     *</span>
+<span class="cm">     * In case of current method if IS_PUBLIC_INSTALLATION is true</span>
+<span class="cm">     * `default` config gets data from `defaultPublic` otherwise from `defaultLocal`</span>
+<span class="cm">     */</span>
+    <span class="k">protected</span> <span class="k">function</span> <span class="nf">_renameConfig</span><span class="p">(</span><span class="nv">$configName</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nv">$postfix</span> <span class="o">=</span> <span class="nx">IS_PUBLIC_INSTALLATION</span> <span class="o">?</span> <span class="s1">'Public'</span> <span class="o">:</span> <span class="s1">'Local'</span><span class="p">;</span>
+        <span class="k">return</span> <span class="nb">preg_replace</span><span class="p">(</span><span class="s1">'/(.*)'</span> <span class="o">.</span> <span class="nv">$postfix</span> <span class="o">.</span> <span class="s1">'$/'</span><span class="p">,</span> <span class="s1">'\1'</span><span class="p">,</span> <span class="nv">$configName</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>Thats all! If you have questions or any suggestions you welcome at <a href="https://github.com/imsamurai/CakePHP-DynamicDatabaseConfig/issues">issues</a>.</p>
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/imsamurai">imsamurai</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-54309823-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>

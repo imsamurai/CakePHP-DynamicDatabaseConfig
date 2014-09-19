@@ -4,7 +4,13 @@
  * Author: imsamurai <im.samuray@gmail.com>
  * Date: 30.07.2013
  * Time: 19:10:40
- *
+ */
+
+/**
+ * Base class for database config
+ * 
+ * @package DynamicDatabaseConfig
+ * @subpackage Config
  */
 abstract class DynamicDatabaseConfig {
 

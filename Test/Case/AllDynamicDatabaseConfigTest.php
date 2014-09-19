@@ -4,7 +4,13 @@
  * Author: imsamurai <im.samuray@gmail.com>
  * Date: 30.10.2013
  * Time: 11:00:00
- *
+ */
+
+/**
+ * AllDynamicDatabaseConfigTest suite
+ * 
+ * @package DynamicDatabaseConfigTest
+ * @subpackage Test
  */
 class AllDynamicDatabaseConfigTest extends PHPUnit_Framework_TestSuite {
 

@@ -6,14 +6,24 @@
  * Time: 17:32:49
  * Format: http://book.cakephp.org/2.0/en/development/testing.html
  */
+
+/**
+ * Include databases
+ */
 require_once dirname(__FILE__) . DS . 'databases.php';
 
+
+/**
+ * DynamicDatabaseConfigTest
+ * 
+ * @package DynamicDatabaseConfigTest
+ * @subpackage Config
+ */
 class DynamicDatabaseConfigTest extends CakeTestCase {
 
-	public function setUp() {
-		parent::setUp();
-	}
-
+	/**
+	 * Test construct
+	 */
 	public function testConstruct() {
 		$DB = new DynamicDatabaseConfigTest1();
 		$dbProperties = (array)$DB;
@@ -26,6 +36,9 @@ class DynamicDatabaseConfigTest extends CakeTestCase {
 		));
 	}
 
+	/**
+	 * Test applying naming schema
+	 */
 	public function testApplyNamingSchema() {
 		$DB = new DynamicDatabaseConfigTest2();
 		$dbProperties = (array)$DB;

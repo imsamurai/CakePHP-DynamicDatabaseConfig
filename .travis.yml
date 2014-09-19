@@ -1,12 +1,18 @@
 language: php
 
+php:
+  - 5.4
+  - 5.5
+  - hhvm
+
 env:
   global:
     - PLUGIN_NAME=DynamicDatabaseConfig
     - PLUGIN_PATH=Plugin/DynamicDatabaseConfig
-    - REQUIRE=""
+    - REQUIRE="imsamurai/cakephp-environment:dev-master phpdocumentor/phpdocumentor:2.*"
     - DB=mysql
-    - CAKE_VERSION=2.4
+    - CAKE_VERSION=2.5
+    - secure: iMoCoiBCShEic6oulmVPlhqFoRluZfXeSASziasHdJWEwMXTjtIv5KtSWa36LxCuVTytU/tI/qw/FepRlrdsCY265i5DW2hTLRRUuZfz/Q0kUQvo0zlg4MJWdZmRCHGY8i9OTr9KewOmRGtSJ/eZkTO2zvXfFE8ErsyfPsFIkZM=
   matrix:
     - CAKE_VERSION=2.3
     - CAKE_VERSION=2.4
@@ -14,34 +20,29 @@ env:
 
 matrix:
   include:
-    - php: 5.4
+    - php: 5.5
       env:
         - COVERALLS=1
-    - php: 5.4
+    - php: 5.5
       env:
         - PHPCS=1
-    - php: 5.4
+    - php: 5.5
       env:
         - FOC_VALIDATE=1
-        
+    - php: 5.5
+      env:
+        - PHPDOC=1
+
 before_script:
-  - git clone https://github.com/FriendsOfCake/travis.git --depth 1 ../travis
-  - ../travis/before_script.sh
-  - if [ "$PHPCS" != 1 ]; then
-        echo "
-            CakePlugin::load('DynamicDatabaseConfig');
-        " >> ../cakephp/app/Config/bootstrap.php;
-    fi
-  - if [ "$PHPCS" = 1 ]; then
-      rm -rf ~/.phpenv/versions/$(phpenv version-name)/pear/PHP/CodeSniffer/Standards/CakePHP;
-      git clone https://github.com/imsamurai/cakephp-codesniffer.git --depth 1 ~/.phpenv/versions/$(phpenv version-name)/pear/PHP/CodeSniffer/Standards/CakePHP;
-    fi
-  
+  - git clone git://github.com/imsamurai/travis-plugin-build.git --depth 1 travis
+  - chmod +x ./travis/*
+  - ./travis/before_script.sh
+
 script:
-  - ../travis/script.sh
+  - ./travis/script.sh
 
 after_success:
-  - ../travis/after_success.sh
+  - ./travis/after_success.sh
 
 notifications:
   email: im.samuray@gmail.com
